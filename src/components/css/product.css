@@ -1,0 +1,36 @@
+.product-box {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: #fff;
+}
+
+.product-img {
+  border-radius: 20px;
+}
+
+.product-title {
+  margin: 3px;
+  font-size: 27px;
+}
+
+.product-ingredient-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.product-ingredient {
+  background-color: #ccc;
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin: 3px;
+}
+
+.product-price {
+  margin: 3px;
+}
+
+.product-btn {
+  margin: 3px;
+}

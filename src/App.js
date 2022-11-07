@@ -34,18 +34,18 @@ const products = [
 ]
 
 function App() {
-  const productList = products.forEach((product) => {
-    return <Product product={product}></Product>
+
+  const productList = products.map((product) => {
+    return <Product key={product.id} product={product}></Product>
   })
+
   return (
-    <div className='App'>
     <CartProvider>
       <Header></Header>
       <div>
         {productList}
       </div>
     </CartProvider>  
-    </div>
   );
 }
 
