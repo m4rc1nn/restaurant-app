@@ -6,7 +6,7 @@ const products = [
   {
     id: 1,
     name: 'Masny Burger',
-    price: 23.99,
+    price: 33.99,
     image: 'https://i.ibb.co/GW0S2zf/burger.png',
     ingredients: [
       {
@@ -30,6 +30,26 @@ const products = [
         amount: 1
       }
     ]
+  },
+  {
+    id: 2,
+    name: 'Hot Dog',
+    price: 9.99,
+    image: 'https://i.ibb.co/RTYKcQq/Hot-Dog.png',
+    ingredients: [
+      {
+        name: 'Bułka',
+        amount: 1
+      },
+      {
+        name: 'Parówka',
+        amount: 1,
+      },
+      {
+        name: 'Sos',
+        amount: 1,
+      },
+    ]
   }
 ]
 
@@ -42,11 +62,17 @@ function App() {
   return (
     <CartProvider>
       <Header></Header>
-      <div>
+      <div style={productBox}>
         {productList}
       </div>
     </CartProvider>  
   );
+}
+
+const productBox = {
+  margin: '20px auto',
+  width: '60%',
+  display: 'flex'
 }
 
 export default App;

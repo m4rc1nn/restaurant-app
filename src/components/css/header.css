@@ -4,14 +4,14 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: #003049;
+  background-color: #fff;
   padding: 30px 0px;
 }
 
 .header-title {
   font-weight: 700;
   font-size: 27px;
-  color: #EAE2B7;
+  color: #ff9114;
 }
 
 .basket {
@@ -35,5 +35,7 @@
 }
 
 .basket-text {
-  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 20px;
+  color: #000;
 }

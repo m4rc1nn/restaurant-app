@@ -3,6 +3,8 @@
   flex-direction: column;
   width: 300px;
   background-color: #fff;
+  border-radius: 20px;
+  margin: 20px;
 }
 
 .product-img {
@@ -10,17 +12,18 @@
 }
 
 .product-title {
+  font-weight: 700;
   margin: 3px;
   font-size: 27px;
 }
 
 .product-ingredient-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  min-height: 150px;
 }
 
 .product-ingredient {
+  width: fit-content;
+  height: fit-content;
   background-color: #ccc;
   padding: 3px 8px;
   border-radius: 5px;
@@ -28,9 +31,18 @@
 }
 
 .product-price {
-  margin: 3px;
+  margin: 20px 3px 3px;
+  font-size: 27px;
 }
 
 .product-btn {
-  margin: 3px;
+  text-align: center;
+  font-weight: 700;
+  background-color: #ff9114;
+  padding: 25px;
+}
+
+.product-btn:hover {
+  cursor: pointer;
+  background-color: #ee9114;
 }

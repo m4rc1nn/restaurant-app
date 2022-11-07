@@ -1,9 +1,11 @@
-import {useState} from 'react';
+import { useContext } from 'react';
+import CartContext from '../contexts/CartContext';
 import './css/product.css';
 
 function Product({product}){
 
   //const [newProduct, setNewProduct] = useState(product);
+  const {addToCart} = useContext(CartContext);
 
   const ingredientList = product.ingredients.map((ingredient, index) => {
     console.log(product);
@@ -18,7 +20,7 @@ function Product({product}){
         {ingredientList}
       </div>
       <span className='product-price'>{product.price}zł</span>
-      <div className='product-btn'>Dodaj do koszyka</div>
+      <div onClick={() => addToCart('test')} className='product-btn'>Dodaj do koszyka</div>
     </div>
   )
 }

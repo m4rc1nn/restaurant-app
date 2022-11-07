@@ -1,7 +1,12 @@
+import { useContext } from 'react';
 import {BsBasket3} from 'react-icons/bs';
+import CartContext from '../contexts/CartContext';
 import './css/header.css';
 
 function Header(){
+
+  const {items} = useContext(CartContext);
+
   return (
     <header className='header'>
       <span className='header-title'>Restaurant App</span>
@@ -9,7 +14,7 @@ function Header(){
           <BsBasket3 className='basket-icon' color='#fff'></BsBasket3>
           <span className='basket-text'>
             Koszyk 
-            <span>(0)</span>
+            <span> [{items.length}] </span>
           </span>
       </div>
     </header>
