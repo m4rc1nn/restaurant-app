@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header.js';
+import Product from './components/Product.js';
+import {CartProvider} from './contexts/CartContext.js';
+
+const products = [
+  {
+    id: 1,
+    name: 'Masny Burger',
+    price: 23.99,
+    image: 'https://i.ibb.co/GW0S2zf/burger.png',
+    ingredients: [
+      {
+        name: 'Sałata',
+        amount: 1
+      },
+      {
+        name: 'Pomidor',
+        amount: 1,
+      },
+      {
+        name: 'Ser',
+        amount: 1
+      },
+      {
+        name: 'Mięso wołowe',
+        amount: 2
+      },
+      {
+        name: 'Sos czosnkowy',
+        amount: 1
+      }
+    ]
+  }
+]
 
 function App() {
+  const productList = products.forEach((product) => {
+    return <Product product={product}></Product>
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+    <CartProvider>
+      <Header></Header>
+      <div>
+        {productList}
+      </div>
+    </CartProvider>  
     </div>
   );
 }
